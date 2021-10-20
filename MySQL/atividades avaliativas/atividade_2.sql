@@ -14,11 +14,11 @@ create table nacoes (
 );
 
 insert into nacoes
-(nacao)
+	(nacao)
 values
-("Brasil"),
-("Angola"),
-("México");
+	("Brasil"),
+	("Angola"),
+	("México");
 
 select * from nacoes;
 
@@ -32,17 +32,17 @@ create table estados (
 );
 
 insert into estados
-(estado, nacao)
+	(estado, nacao)
 value
-("Mato Grosso", "Brasil"),
-("Minas Gerais", "Brasil"),
-("Bahia", "Brasil"),
-("Huambo", "Angola"),
-("Huíla", "Angola"),
-("Luanda", "Angola"),
-("Jalisco", "México"),
-("Michoacán", "México"),
-("Nuevo León", "México");
+	("Mato Grosso", "Brasil"),
+	("Minas Gerais", "Brasil"),
+	("Bahia", "Brasil"),
+	("Huambo", "Angola"),
+	("Huíla", "Angola"),
+	("Luanda", "Angola"),
+	("Jalisco", "México"),
+	("Michoacán", "México"),
+	("Nuevo León", "México");
 
 
 select * from estados;
@@ -51,10 +51,10 @@ select * from estados;
 create table cidades (
 	cidade varchar(20) not null,
 	estado varchar(20) not null,
-    nacao varchar(20) not null,
-    primary key (cidade),
-    foreign key (nacao) references nacoes(nacao),
-    foreign key (estado) references estados(estado)
+    	nacao varchar(20) not null,
+    	primary key (cidade),
+   	foreign key (nacao) references nacoes(nacao),
+   	foreign key (estado) references estados(estado)
     
     );
 /* Inserindo cidades no Brasileiras */
