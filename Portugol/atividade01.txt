@@ -1,0 +1,58 @@
+ALGORITMO exercicio01;
+
+VAR
+	INTEIRO: num; 
+INICIO
+	ESCREVA("Informe o um número inteiro: ");
+	LEIA(num);
+ 
+	ESCREVA("O número informado foi ", num); 
+	ESCREVA("DOBRO = ",num *2);
+	ESCREVA("ANTECESSOR = ",num - 1);								
+	ESCREVA("SUCESSOR = ", num + 1, " | TRIPLO DO SUCESSOR = ",(num + 1)*3);	
+FIM
+
+----------------------------------------
+ALGORITMO exercicio02
+
+VAR
+	REAL: num;
+INICIO
+	ESCREVA("Informe o número que deseja calcular: ")
+	LEIA(num);
+
+	ESCREVA("A quinta parte do número informado é igual a: ", num / 5);
+FIM
+
+----------------------------------------
+
+ALGORITMO exercicio03
+
+VAR
+	INTEIRO: cm;
+INICIO
+	ESCREVA("Infomre o valor a ser convertido(em cm): ");
+	LEIA(cm);
+
+	ESCREVA(num/2.54, "cm convertido em polegadas é igual a: ", num/2.54);
+FIM
+
+----------------------------------------
+ALGORITMO exercicio 04
+
+VAR
+	INTEIRO: num1, num2, soma;
+INICIO
+	ESCREVA("Informe um número: ");
+	LEIA(num1);
+	ESCREVA("Informe outro número: ");
+	LEIA(num2);
+	
+	soma <- num1 + num2;
+
+	SE (soma <= 20) ENTÃO
+		ESCREVA("Nesse caso, o resultado de ", soma, "- 8: ", soma - 8);		
+	SENÃO
+    		ESCREVA("Nesse caso, o resultado de ", soma, "+ 8: ", soma + 8);
+	FIM_SE
+FIM

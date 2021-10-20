@@ -1,0 +1,160 @@
+ALGORITMO ex001
+VAR
+	INTEIRO: cont;	
+INICIO
+	PARA (cont <- 0; cont < 101 cont <- cont + 10)
+		ESCREVA (cont, " - ");
+	FIM_PARA
+
+FIM
+
+
+
+
+
+
+
+
+
+
+----------------------------
+ALGORITMO ex002
+VAR
+	INTEIRO: cont, soma, num;
+INICIO
+	soma <- 0;
+	media <- 0;	
+	
+	//ler e fazer a contagem dos números positivos e somar eles
+	PARA (cont <- 0; cont < 10 cont <- cont + 1)
+		ESCREVA("Informe um número:  ");
+		LEIA(num);
+		SE (num > 0) ENTÃO
+			soma <- soma + num;
+		FIM_SE
+	FIM_PARA
+
+	ESCREVA("A media de todos os números informados foi: ", soma / cont);
+
+FIM
+
+
+
+
+
+
+
+
+
+
+----------------------------
+ALGORITMO ex003
+VAR
+	INTEIRO: numeros[10], cont, num, x, y;
+INICIO
+	x <- 0;
+	y <- 0;	
+
+	//receber e armazenar 10 números no vetor numeros[10]
+	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+		ESCREVA ("Informe um número:  ");
+		LEIA(num);
+		numeros[cont] <- num;
+	FIM_PARA
+	
+	x <- numeros[2];	
+	y <- numeros[4];
+
+	ESCREVA("A soma dos valores", x, " e ", y, " é igual a: ", x + y);
+FIM
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
+ALGORITMO ex004
+VAR
+	INTEIRO: numeros[10], cont, num, maior, menor;	
+INICIO
+	maior <- 0;
+	menor <- 0;	
+
+	//receber e armazenar 10 números no vetor numeros[10], já armazenando os números maior e menor nas respectivas variaveis
+	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+		ESCREVA ("Informe um número:  ");
+		LEIA(num);
+		numeros[cont] <- num;
+		SE (num > maior) ENTÃO
+			maior <- num;
+		SENÃO SE (num < menor) ENTÃO
+			menor <- num;
+		FIM_SE
+	FIM_PARA
+	
+	ESCREVA("Os números informados foram: ");
+	
+	//escreve todos os números armazenados no vetor
+	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+		ESCREVA("vetor[num] -");
+	FIM_PARA
+	
+	ESCREVA("Maior: ", maior);
+	ESCREVA("Menor: ", menor);
+FIM
+
+
+
+
+
+
+
+
+
+
+
+----------------------------
+ALGORITMO ex005
+VAR
+	INTEIRO: matriz[5][5], pares[5][5], num, linha, coluna, posicao;
+INICIO
+	posicao <- 0;
+
+	PARA(linha <- 0; linha < 5, linha <- linha + 1) FAÇA
+		PARA(coluna <- 0; coluna < 5; coluna < - coluna + 1) FAÇA
+			ESCREVA("Informe um número: ");
+			LEIA(num);
+			matriz[linha][coluna] <- num
+		FIM_PARA
+	FIM_PARA
+
+	PARA(linha <- 0; linha < 5, linha <- linha + 1) FAÇA
+		PARA(coluna <- 0; coluna < 5; coluna < - coluna + 1) FAÇA
+			posicao <- linha + coluna;
+			SE (posicao MOD 2 = 0) ENTÃO
+				ESCREVA(pares[linha][coluna]);	
+			FIM_SE
+		FIM_PARA
+	FIM_PARA
+
+
+
+
+
+
+
+
+
+
+
+
+FIM
+
+
+----------------------------
