@@ -29,7 +29,7 @@ INICIO
 	PARA (cont <- 0; cont < 10 cont <- cont + 1)
 		ESCREVA("Informe um número:  ");
 		LEIA(num);
-		SE (num > 0) ENTÃO
+		SE (num >= 0) ENTÃO
 			soma <- soma + num;
 		FIM_SE
 	FIM_PARA
@@ -56,15 +56,21 @@ INICIO
 	y <- 0;	
 
 	//receber e armazenar 10 números no vetor numeros[10]
-	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+	PARA (cont <- 0; cont < 10; cont <- cont + 1) FAÇA
 		ESCREVA ("Informe um número:  ");
 		LEIA(num);
 		numeros[cont] <- num;
 	FIM_PARA
 	
-	x <- numeros[2];	
-	y <- numeros[4];
+	// Esse foi um meio que encontrei para "sortear" os números que vão ser somados
+	PARA(cont <- 0; cont < 10; cont <- cont + 1) FAÇA
+		SE (numeros[cont] < x) ENTÃO
+			x <- numeros[cont];
+		SENÃO (numeros[cont] >= y) ENTÃO
+			y <- numeros[cont];
+		FIM_SE
 
+	// Apresenta os resultados
 	ESCREVA("A soma dos valores", x, " e ", y, " é igual a: ", x + y);
 FIM
 
@@ -87,7 +93,7 @@ INICIO
 	menor <- 0;	
 
 	//receber e armazenar 10 números no vetor numeros[10], já armazenando os números maior e menor nas respectivas variaveis
-	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+	PARA (cont <- 0; cont < 10; cont <- cont + 1) FAÇA
 		ESCREVA ("Informe um número:  ");
 		LEIA(num);
 		numeros[cont] <- num;
@@ -101,7 +107,7 @@ INICIO
 	ESCREVA("Os números informados foram: ");
 	
 	//escreve todos os números armazenados no vetor
-	PARA (cont <- 0; cont < 10; cont <- cont = 1) FAÇA
+	PARA (cont <- 0; cont < 10; cont <- cont + 1) FAÇA
 		ESCREVA("vetor[num] -");
 	FIM_PARA
 	
@@ -142,18 +148,6 @@ INICIO
 			FIM_SE
 		FIM_PARA
 	FIM_PARA
-
-
-
-
-
-
-
-
-
-
-
-
 FIM
 
 

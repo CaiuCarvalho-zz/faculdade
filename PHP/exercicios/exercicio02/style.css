@@ -1,0 +1,38 @@
+body {
+	background-color: #3498db;
+	font-family: Tahoma;
+	font-size: 14px;
+}
+
+
+a {
+	text-decoration: none;
+	color: #e17055;
+}
+
+
+a:hover {
+	text-decoration: underline;
+	color: #ff7675;
+
+}
+
+.menu ul {
+	padding: 0px;
+	background-color:#2d3436;
+}
+
+
+
+.menu li {
+	padding: 10px;
+	display: inline-block;
+	list-style: none;
+}
+
+
+
+.menu a {
+	color: #fdcb6e;
+	text-decoration: none;
+}

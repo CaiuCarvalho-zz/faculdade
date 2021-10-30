@@ -1,0 +1,51 @@
+body {
+	font-family: "Segoe UI";
+	font-size: 14px;
+	color: #0984e3;
+
+}
+
+ul{
+	padding: 0px;
+}
+
+button{
+	border: none	;
+	border-radius: 5px;
+	padding: 5px;
+	color: #ecf0f1;
+	display: inline-block;
+	width: 100px;
+	background-color: #3498bd;
+}
+
+.nav{
+	background-color: #b2bec3;
+	padding: 2px;
+	list-style: none;
+}
+
+.nav-item{
+	padding: 5px;
+	display: inline;
+}
+
+.nav-link{
+	color: #0984e3;
+	text-decoration: none;
+}
+
+.inputs
+{
+	border: solid;
+	border-width: 1px;
+	border-color: #bdc3c7;
+	border-radius: 5px;
+	padding: 5px;
+	color: #34495e;
+	width: 180px;
+}
+
+.inputs:focus {
+	outline-color: #7f8c8d;
+}
